@@ -67,7 +67,7 @@ function AppBar(): JSX.Element {
                           </a>
                         </NavLink>
                       )}
-                      {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
+                      {/* {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
                         <NavLink href={'/farm'}>
                           <a
                             id={`farm-nav-link`}
@@ -76,8 +76,8 @@ function AppBar(): JSX.Element {
                             {i18n._(t`Farm`)}
                           </a>
                         </NavLink>
-                      )}
-                      {chainId && featureEnabled(Feature.KASHI, chainId) && (
+                      )} */}
+                      {/* {chainId && featureEnabled(Feature.KASHI, chainId) && (
                         <>
                           <NavLink href={'/lend'}>
                             <a
@@ -96,8 +96,8 @@ function AppBar(): JSX.Element {
                             </a>
                           </NavLink>
                         </>
-                      )}
-                      {chainId && featureEnabled(Feature.STAKING, chainId) && (
+                      )} */}
+                      {/* {chainId && featureEnabled(Feature.STAKING, chainId) && (
                         <NavLink href={'/stake'}>
                           <a
                             id={`stake-nav-link`}
@@ -106,7 +106,7 @@ function AppBar(): JSX.Element {
                             {i18n._(t`Stake`)}
                           </a>
                         </NavLink>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>
