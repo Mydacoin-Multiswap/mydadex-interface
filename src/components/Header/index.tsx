@@ -18,6 +18,7 @@ import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useETHBalances } from '../../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
+import { important } from 'polished'
 
 // import { ExternalLink, NavLink } from "./Link";
 // import { ReactComponent as Burger } from "../assets/images/burger.svg";
@@ -44,7 +45,8 @@ function AppBar(): JSX.Element {
                       <NavLink href="/swap">
                         <a
                           id={`swap-nav-link`}
-                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          className="p-2 text-baseline hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap" 
+                          style={{color:'white !important'}}
                         >
                           {i18n._(t`Swap`)}
                         </a>
@@ -52,8 +54,9 @@ function AppBar(): JSX.Element {
                       <NavLink href="/pool">
                         <a
                           id={`pool-nav-link`}
-                          className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
-                        >
+                          className="p-2 text-baseline hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          style={{color:'white !important'}}
+                      >
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>
@@ -292,7 +295,7 @@ function AppBar(): JSX.Element {
                   </a>
                 </Link>
 
-                {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
+                {/* {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
                   <Link href={'/farm'}>
                     <a
                       id={`farm-nav-link`}
@@ -345,7 +348,7 @@ function AppBar(): JSX.Element {
                   >
                     {i18n._(t`Analytics`)}
                   </ExternalLink>
-                )}
+                )} */}
               </div>
             </Popover.Panel>
           </>

@@ -452,7 +452,7 @@ export default function Swap() {
         onConfirm={handleConfirmTokenWarning}
       />
       <DoubleGlowShadow>
-        <div className="p-4 space-y-4 rounded z-1" style={{backgroundColor:"rgba(9, 147, 236, 0.4)"}}>
+        <div className="p-4 space-y-4 rounded z-1" style={{backgroundColor:"rgb(102, 2, 60,0.5)"}}>
           <SwapHeader
             input={currencies[Field.INPUT]}
             output={currencies[Field.OUTPUT]}
