@@ -1,14 +1,4 @@
-import {
-  Currency,
-  CurrencyAmount,
-  Fraction,
-  JSBI,
-  Percent,
-  Token,
-  Trade,
-  TradeType,
-  currencyEquals,
-} from '@sushiswap/sdk'
+import { Currency, CurrencyAmount, Fraction, JSBI, Percent, Token, Trade, TradeType, currencyEquals } from 'mydaswapsdk'
 import { ONE_HUNDRED_PERCENT, ZERO_PERCENT } from '../constants'
 
 import { BigNumber } from '@ethersproject/bignumber'

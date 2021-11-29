@@ -7,7 +7,7 @@ import {
   Token,
   TradeType,
   Trade as V2Trade,
-} from '@sushiswap/sdk'
+} from 'mydaswapsdk'
 import { ApprovalState, useApproveCallbackFromTrade } from '../../../hooks/useApproveCallback'
 import { ArrowWrapper, BottomGrouping, SwapCallbackError } from '../../../features/exchange-v1/swap/styleds'
 import { ButtonConfirmed, ButtonError } from '../../../components/Button'
@@ -452,7 +452,7 @@ export default function Swap() {
         onConfirm={handleConfirmTokenWarning}
       />
       <DoubleGlowShadow>
-        <div className="p-4 space-y-4 rounded z-1" style={{backgroundColor:"rgb(102, 2, 60,0.5)"}}>
+        <div className="p-4 space-y-4 rounded z-1" style={{ backgroundColor: 'rgb(102, 2, 60,0.5)' }}>
           <SwapHeader
             input={currencies[Field.INPUT]}
             output={currencies[Field.OUTPUT]}

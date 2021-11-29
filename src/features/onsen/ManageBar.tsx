@@ -22,7 +22,7 @@ import {
   Token,
   USDC,
   ZERO,
-} from '@sushiswap/sdk'
+} from 'mydaswapsdk'
 import { getAddress } from '@ethersproject/address'
 import { Chef, PairType } from './enum'
 import { useKashiPair } from '../kashi/context'

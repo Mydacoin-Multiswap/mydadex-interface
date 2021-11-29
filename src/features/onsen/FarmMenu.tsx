@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from 'mydaswapsdk'
 import NavLink from '../../components/NavLink'
 import React from 'react'
 import { useActiveWeb3React } from '../../hooks'

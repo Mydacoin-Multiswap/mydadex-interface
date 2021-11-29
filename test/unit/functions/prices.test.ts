@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, JSBI, Pair, Route, Token, Trade, TradeType } from '@sushiswap/sdk'
+import { ChainId, CurrencyAmount, JSBI, Pair, Route, Token, Trade, TradeType } from 'mydaswapsdk'
 
 import { computeRealizedLPFeeAmount } from '../../../src/functions/prices'
 

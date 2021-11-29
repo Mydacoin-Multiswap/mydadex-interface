@@ -1,4 +1,4 @@
-import { BigintIsh, Currency, CurrencyAmount, JSBI } from '@sushiswap/sdk'
+import { BigintIsh, Currency, CurrencyAmount, JSBI } from 'mydaswapsdk'
 
 import { Interface } from '@ethersproject/abi'
 

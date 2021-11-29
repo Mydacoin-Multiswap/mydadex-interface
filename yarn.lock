@@ -3139,36 +3139,9 @@
   dependencies:
     "@sushiswap/default-token-list" "^11.3.0"
 
-"@sushiswap/sdk@5.0.0-canary.96":
-  version "5.0.0-canary.96"
-  resolved "https://registry.yarnpkg.com/@sushiswap/sdk/-/sdk-5.0.0-canary.96.tgz#9f20630946b18b1f7e050cba34f0246e19301341"
-  integrity sha512-pti0plFeRf7i7K7u/fyqgCvV/NPSyBxortTk4CL8EPsLb92C6Qf2DZsiyNtTM6kiUmbNp+xRi90BuvGLpkrwXw==
-  dependencies:
-    "@ethersproject/abi" "^5.4.0"
-    "@ethersproject/abstract-signer" "^5.4.0"
-    "@ethersproject/address" "^5.4.0"
-    "@ethersproject/bignumber" "^5.4.0"
-    "@ethersproject/bytes" "^5.4.0"
-    "@ethersproject/contracts" "^5.4.0"
-    "@ethersproject/experimental" "^5.4.0"
-    "@ethersproject/networks" "^5.4.0"
-    "@ethersproject/providers" "^5.4.0"
-    "@ethersproject/signing-key" "^5.4.0"
-    "@ethersproject/solidity" "^5.4.0"
-    "@ethersproject/transactions" "^5.4.0"
-    "@sushiswap/core" "^2.0.0-canary.1"
-    big.js "^6.1.0"
-    decimal.js-light "^2.5.0"
-    eip-712 "^0.4.3"
-    isomorphic-unfetch "^3.1.0"
-    jsbi "^3.1.0"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
-"@sushiswap/sushi-data@^1.0.24":
+"mydaswapsdkhi-data@^1.0.24":
   version "1.0.26"
-  resolved "https://registry.yarnpkg.com/@sushiswap/sushi-data/-/sushi-data-1.0.26.tgz#6f9d68f0193d7bb3839262fe47dcd095478ee3e1"
+  resolved "https://registry.yarnpkg.com/mydaswapsdkhi-data/-/sushi-data-1.0.26.tgz#6f9d68f0193d7bb3839262fe47dcd095478ee3e1"
   integrity sha512-zGAL3un1K8J+mc4GyMhjOdJHYsnuwh7WiP4zlgvGyz1FJbFvnkv6NaKqh1bLAVCJDTZRFBZCzty7qp+6kX+nJw==
   dependencies:
     bluebird "^3.7.2"
@@ -11273,6 +11246,11 @@ jsbi@^3.1.0, jsbi@^3.1.5:
   resolved "https://registry.yarnpkg.com/jsbi/-/jsbi-3.2.2.tgz#277aa2c5d4b3000694be5f97266b23ff7f29803a"
   integrity sha512-c34oMAtJ6a05rV+v8LggKfbPWn2puqAmchk0/HbAFGozd5nptFMUgsJrkRZDmKXfcR8RG9maeehL4i2xI/kBBQ==
 
+jsbi@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/jsbi/-/jsbi-4.1.0.tgz#f0c25ed8881bc09891334b03a3952efaa7add337"
+  integrity sha512-384Z4keIsJtYpnVggsxaB255MZctILbxv+ihtwoWPF7KNOlYHn1LFpRnUw5qsAspUAA2+I7qzjVJxVYtHVjxNw==
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -12604,6 +12582,33 @@ mute-stream@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
+
+mydaswapsdk@^5.0.0-canary.108:
+  version "5.0.0-canary.108"
+  resolved "https://registry.yarnpkg.com/mydaswapsdk/-/mydaswapsdk-5.0.0-canary.108.tgz#7556836fdbc0ee960304bc9fbad92deba534114c"
+  integrity sha512-iBjcvBcZ3kCDaXGkjQx8KyfUKzoBTVC5kzg0A4hjjV+mE4BdGXTDLgxra8oTnbRiVERpWVNgbDQlyELrRlEstQ==
+  dependencies:
+    "@ethersproject/abi" "^5.4.0"
+    "@ethersproject/abstract-signer" "^5.4.0"
+    "@ethersproject/address" "^5.4.0"
+    "@ethersproject/bignumber" "^5.4.0"
+    "@ethersproject/bytes" "^5.4.0"
+    "@ethersproject/contracts" "^5.4.0"
+    "@ethersproject/experimental" "^5.4.0"
+    "@ethersproject/networks" "^5.4.0"
+    "@ethersproject/providers" "^5.4.0"
+    "@ethersproject/signing-key" "^5.4.0"
+    "@ethersproject/solidity" "^5.4.0"
+    "@ethersproject/transactions" "^5.4.0"
+    "@sushiswap/core" "^2.0.0-canary.1"
+    big.js "^6.1.0"
+    decimal.js-light "^2.5.0"
+    eip-712 "^0.4.3"
+    isomorphic-unfetch "^3.1.0"
+    jsbi "^4.1.0"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
 
 nan@^2.13.2, nan@^2.14.0, nan@^2.14.2, nan@^2.2.1:
   version "2.15.0"

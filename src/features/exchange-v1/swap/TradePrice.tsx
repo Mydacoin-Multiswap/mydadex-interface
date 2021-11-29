@@ -1,4 +1,4 @@
-import { Currency, Price } from '@sushiswap/sdk'
+import { Currency, Price } from 'mydaswapsdk'
 import React, { useCallback } from 'react'
 
 import Typography from '../../../components/Typography'

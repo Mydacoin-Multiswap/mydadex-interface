@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI, Pair, Percent, Token, ZERO } from '@sushiswap/sdk'
+import { Currency, CurrencyAmount, JSBI, Pair, Percent, Token, ZERO } from 'mydaswapsdk'
 import { Field, typeInput } from './actions'
 import { useAppDispatch, useAppSelector } from '../hooks'
 

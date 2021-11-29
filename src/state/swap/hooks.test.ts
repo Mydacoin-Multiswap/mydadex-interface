@@ -1,6 +1,6 @@
 import { parse } from 'qs'
 
-import { ChainId, SUSHI_ADDRESS } from '@sushiswap/sdk'
+import { ChainId, SUSHI_ADDRESS } from 'mydaswapsdk'
 
 import { Field } from './actions'
 import { queryParametersToSwapState } from './hooks'

@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@sushiswap/sdk'
+import { ChainId, Token } from 'mydaswapsdk'
 import { useLayoutEffect, useState } from 'react'
 
 import Vibrant from 'node-vibrant'

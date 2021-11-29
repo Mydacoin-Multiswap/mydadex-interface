@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI } from '@sushiswap/sdk'
+import { Currency, CurrencyAmount, JSBI } from 'mydaswapsdk'
 
 import { parseUnits } from '@ethersproject/units'
 

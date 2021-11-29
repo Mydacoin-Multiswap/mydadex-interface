@@ -1,4 +1,4 @@
-import { ChainId, Currency, NATIVE, SUSHI_ADDRESS } from '@sushiswap/sdk'
+import { ChainId, Currency, NATIVE, SUSHI_ADDRESS } from 'mydaswapsdk'
 import { Feature, featureEnabled } from '../../functions/feature'
 import React, { useEffect, useState } from 'react'
 
@@ -45,8 +45,8 @@ function AppBar(): JSX.Element {
                       <NavLink href="/swap">
                         <a
                           id={`swap-nav-link`}
-                          className="p-2 text-baseline hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap" 
-                          style={{color:'white !important'}}
+                          className="p-2 text-baseline hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          style={{ color: 'white !important' }}
                         >
                           {i18n._(t`Swap`)}
                         </a>
@@ -55,8 +55,8 @@ function AppBar(): JSX.Element {
                         <a
                           id={`pool-nav-link`}
                           className="p-2 text-baseline hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
-                          style={{color:'white !important'}}
-                      >
+                          style={{ color: 'white !important' }}
+                        >
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>

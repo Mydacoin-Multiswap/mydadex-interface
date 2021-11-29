@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@sushiswap/sdk'
+import { CurrencyAmount, Token } from 'mydaswapsdk'
 import React, { FC, useCallback } from 'react'
 import { useDerivedInariState, useInariState, useSelectedInariStrategy } from '../../state/inari/hooks'
 
