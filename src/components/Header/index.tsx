@@ -172,7 +172,7 @@ function AppBar(): JSX.Element {
                                 type: 'ERC20',
                                 options: {
                                   address: SUSHI_ADDRESS[chainId],
-                                  symbol: 'SUSHI',
+                                  symbol: 'MYDA',
                                   decimals: 18,
                                   image: 'https://mydacoin.com/logo-small.png',
                                 },
@@ -185,7 +185,7 @@ function AppBar(): JSX.Element {
                                   })
                                   .then((success) => {
                                     if (success) {
-                                      console.log('Successfully added SUSHI to MetaMask')
+                                      console.log('Successfully added MYDA to MetaMask')
                                     } else {
                                       throw new Error('Something went wrong.')
                                     }
@@ -196,7 +196,7 @@ function AppBar(): JSX.Element {
                           >
                             <Image
                               src="/images/tokens/myda-square.jpg"
-                              alt="SUSHI"
+                              alt="MYDA"
                               width="38px"
                               height="38px"
                               objectFit="contain"
