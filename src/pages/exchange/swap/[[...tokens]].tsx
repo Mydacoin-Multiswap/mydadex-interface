@@ -407,6 +407,8 @@ export default function Swap() {
     [onCurrencySelection]
   )
 
+  const GREY = '#1D1D1D'
+
   // useEffect(() => {
   //   if (
   //     doArcher &&
@@ -452,7 +454,10 @@ export default function Swap() {
         onConfirm={handleConfirmTokenWarning}
       />
       <DoubleGlowShadow>
-        <div className="p-4 space-y-4 rounded z-1" style={{ backgroundColor: 'rgb(102, 2, 60,0.5)' }}>
+        <div
+          className="p-4 space-y-4 rounded z-1"
+          style={{ backgroundColor: 'rgb(98, 0, 57, 0.75)', boxShadow: `10px 10px 5px ${GREY}` }}
+        >
           <SwapHeader
             input={currencies[Field.INPUT]}
             output={currencies[Field.OUTPUT]}

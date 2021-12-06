@@ -36,6 +36,20 @@ body {
   color: var(--text-primary);
 }
 
+.text-secondary {
+  --tw-text-opacity : 0 !important;
+  color : white !important;
+}
+
+.text-primary{
+  color : white !important;
+
+}
+
+.text-high-emphesis{
+  color: #620039 !important;
+}
+
 body {
   position: relative;
   margin: 0;
