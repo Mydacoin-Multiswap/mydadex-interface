@@ -233,13 +233,13 @@ export const SUSHI: ChainTokenMap = {
   // [ChainId.MATIC]: new Token(ChainId.MATIC, SUSHI_ADDRESS[ChainId.MATIC], 18, 'MYDA', 'MydaCoin'),
   // [ChainId.FANTOM]: new Token(ChainId.FANTOM, SUSHI_ADDRESS[ChainId.FANTOM], 18, 'MYDA', 'MydaCoin'),
   // [ChainId.XDAI]: new Token(ChainId.XDAI, SUSHI_ADDRESS[ChainId.XDAI], 18, 'MYDA', 'MydaCoin'),
-  // [ChainId.BSC]: new Token(ChainId.BSC, SUSHI_ADDRESS[ChainId.BSC], 18, 'MYDA', 'MydaCoin'),
+  [ChainId.BSC]: new Token(ChainId.BSC, SUSHI_ADDRESS[ChainId.BSC], 18, 'MYDA', 'MydaCoin'),
   [ChainId.BSC_TESTNET]: new Token(ChainId.BSC, SUSHI_ADDRESS[ChainId.BSC_TESTNET], 18, 'MYDA', 'MydaCoin'),
   // [ChainId.ARBITRUM]: new Token(ChainId.ARBITRUM, SUSHI_ADDRESS[ChainId.ARBITRUM], 18, 'MYDA', 'MydaCoin'),
   // [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, SUSHI_ADDRESS[ChainId.AVALANCHE], 18, 'MYDA', 'MydaCoin'),
   // [ChainId.OKEX]: new Token(ChainId.OKEX, SUSHI_ADDRESS[ChainId.OKEX], 18, 'MYDA', 'MydaCoin'),
   // [ChainId.HARMONY]: new Token(ChainId.HARMONY, SUSHI_ADDRESS[ChainId.HARMONY], 18, 'MYDA', 'MydaCoin'),
-  // [ChainId.HECO]: new Token(ChainId.HECO, SUSHI_ADDRESS[ChainId.HECO], 18, 'MYDA', 'MydaCoin'),
+  [ChainId.HECO]: new Token(ChainId.HECO, SUSHI_ADDRESS[ChainId.HECO], 18, 'MYDA', 'MydaCoin'),
 }
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {

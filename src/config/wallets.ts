@@ -60,8 +60,8 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
           42, // kovan
           250, // fantom
           4002, // fantom testnet
-          137, // matic
-          80001, // matic testnet
+          // 137, // matic
+          // 80001, // matic testnet
           100, // xdaiW
           56, // binance smart chain
           97, // binance smart chain testnet
