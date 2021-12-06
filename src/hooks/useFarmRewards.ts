@@ -81,7 +81,7 @@ export default function useFarmRewards() {
 
       const defaultReward = {
         token: 'SUSHI',
-        icon: 'https://raw.githubusercontent.com/sushiswap/icons/master/token/sushi.jpg',
+        icon: 'https://raw.githubusercontent.com/Mydacoin-Multiswap/icons/master/token/sushi.jpg',
         rewardPerBlock,
         rewardPerDay: rewardPerBlock * blocksPerDay,
         rewardPrice: sushiPrice,
@@ -94,8 +94,8 @@ export default function useFarmRewards() {
         pool.owner.totalAllocPoint = masterChefV1TotalAllocPoint
 
         const icon = ['0', '3', '4', '8'].includes(pool.id)
-          ? `https://raw.githubusercontent.com/sushiswap/icons/master/token/${pool.rewardToken.symbol.toLowerCase()}.jpg`
-          : `https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/${getAddress(
+          ? `https://raw.githubusercontent.com/Mydacoin-Multiswap/icons/master/token/${pool.rewardToken.symbol.toLowerCase()}.jpg`
+          : `https://raw.githubusercontent.com/Mydacoin-Multiswap/assets/master/blockchains/ethereum/assets/${getAddress(
               pool.rewarder.rewardToken
             )}/logo.png`
 
@@ -132,21 +132,21 @@ export default function useFarmRewards() {
         const reward = {
           [ChainId.MATIC]: {
             token: 'MATIC',
-            icon: 'https://raw.githubusercontent.com/sushiswap/icons/master/token/polygon.jpg',
+            icon: 'https://raw.githubusercontent.com/Mydacoin-Multiswap/icons/master/token/polygon.jpg',
             rewardPrice: maticPrice,
             rewardPerBlock,
             rewardPerDay,
           },
           [ChainId.XDAI]: {
             token: 'STAKE',
-            icon: 'https://raw.githubusercontent.com/sushiswap/icons/master/token/stake.jpg',
+            icon: 'https://raw.githubusercontent.com/Mydacoin-Multiswap/icons/master/token/stake.jpg',
             rewardPerBlock,
             rewardPerDay,
             rewardPrice: stakePrice,
           },
           [ChainId.HARMONY]: {
             token: 'ONE',
-            icon: 'https://raw.githubusercontent.com/sushiswap/icons/master/token/one.jpg',
+            icon: 'https://raw.githubusercontent.com/Mydacoin-Multiswap/icons/master/token/one.jpg',
             rewardPrice: onePrice,
           },
         }

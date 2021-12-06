@@ -175,6 +175,6 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "mydaswapsdk": "^5.0.0-canary.108"
+    "mydaswapsdk": "^5.0.0-canary.112"
   }
 }

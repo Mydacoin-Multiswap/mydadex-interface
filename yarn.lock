@@ -3139,9 +3139,9 @@
   dependencies:
     "@sushiswap/default-token-list" "^11.3.0"
 
-"mydaswapsdkhi-data@^1.0.24":
+"@sushiswap/sushi-data@^1.0.24":
   version "1.0.26"
-  resolved "https://registry.yarnpkg.com/mydaswapsdkhi-data/-/sushi-data-1.0.26.tgz#6f9d68f0193d7bb3839262fe47dcd095478ee3e1"
+  resolved "https://registry.yarnpkg.com/@sushiswap/sushi-data/-/sushi-data-1.0.26.tgz#6f9d68f0193d7bb3839262fe47dcd095478ee3e1"
   integrity sha512-zGAL3un1K8J+mc4GyMhjOdJHYsnuwh7WiP4zlgvGyz1FJbFvnkv6NaKqh1bLAVCJDTZRFBZCzty7qp+6kX+nJw==
   dependencies:
     bluebird "^3.7.2"
@@ -12583,10 +12583,10 @@ mute-stream@0.0.8:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-mydaswapsdk@^5.0.0-canary.108:
-  version "5.0.0-canary.108"
-  resolved "https://registry.yarnpkg.com/mydaswapsdk/-/mydaswapsdk-5.0.0-canary.108.tgz#7556836fdbc0ee960304bc9fbad92deba534114c"
-  integrity sha512-iBjcvBcZ3kCDaXGkjQx8KyfUKzoBTVC5kzg0A4hjjV+mE4BdGXTDLgxra8oTnbRiVERpWVNgbDQlyELrRlEstQ==
+mydaswapsdk@^5.0.0-canary.112:
+  version "5.0.0-canary.112"
+  resolved "https://registry.yarnpkg.com/mydaswapsdk/-/mydaswapsdk-5.0.0-canary.112.tgz#6082b7bbf6e3bf442e98d39593f507ec3fb6c265"
+  integrity sha512-BI4Kf627kibf2CNNVuYPAI2TaMdfsyqCNN0AdNiqn+FrXRhEd0ALhfR5laGtAUp7Z6rJnLM23dPZheqUUZc4SQ==
   dependencies:
     "@ethersproject/abi" "^5.4.0"
     "@ethersproject/abstract-signer" "^5.4.0"

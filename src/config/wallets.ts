@@ -126,7 +126,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
       return new WalletLinkConnector({
         url: RPC[ChainId.MAINNET],
         appName: 'MydaDex',
-        appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png',
+        appLogoUrl: 'https://raw.githubusercontent.com/Mydacoin-Multiswap/icons/master/token/myda.jpg',
       })
     },
     name: 'Coinbase Wallet',

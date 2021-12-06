@@ -347,6 +347,7 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
   const sushi = SUSHI_ADDRESS[chainId]
   if (inputCurrency === '' && outputCurrency === '') {
     inputCurrency = eth
+    // Change This to get Default Currencies
     outputCurrency = sushi
   } else if (inputCurrency === '') {
     inputCurrency = outputCurrency === eth ? sushi : eth
