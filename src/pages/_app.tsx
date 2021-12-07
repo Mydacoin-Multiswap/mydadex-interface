@@ -119,7 +119,7 @@ function MyApp({
         <meta
           key="description"
           name="description"
-          content="Be a DeFi Chef with Sushi. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform. Welcome home to DeFi"
+          content="Welcome home to MYDA DeFi"
         />
 
         <meta name="application-name" content="MYDA App" />
@@ -139,7 +139,7 @@ function MyApp({
         <meta
           key="twitter:description"
           name="twitter:description"
-          content="Be a DeFi Chef with Sushi. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform. Welcome home to DeFi"
+          content="Welcome home to MYDA DeFi"
         />
         <meta key="twitter:image" name="twitter:image" content="https://app.sushi.com/icons/icon-192x192.png" />
         <meta key="twitter:creator" name="twitter:creator" content="@MydaDex" />
@@ -150,7 +150,7 @@ function MyApp({
         <meta
           key="og:description"
           property="og:description"
-          content="Be a DeFi Chef with Sushi. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform. Welcome home to DeFi"
+          content="Welcome home to MYDA DeFi"
         />
       </Head>
       <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
