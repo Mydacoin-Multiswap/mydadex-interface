@@ -156,8 +156,7 @@
     "tailwindcss": "^2.2.9",
     "tailwindcss-border-gradient-radius": "^2.0.0",
     "typescript": "^4.3.5",
-    "wcag-contrast": "^3.0.0",
-    "mydaswapsdk": "^5.0.0-canary.200"
+    "wcag-contrast": "^3.0.0"
   },
   "next-unused": {
     "debug": true,
@@ -174,5 +173,8 @@
     "not ie 11",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "mydaswapsdk": "5.0.0-canary.205"
+  }
 }

@@ -16,6 +16,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const { withSentryConfig } = require('@sentry/nextjs')
 
+module.exports = {
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+}
+
+
 const nextConfig = {
   webpack: (config) => {
     config.module.rules = [
@@ -40,11 +49,11 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
-      // {
-      //   source: '/',
-      //   destination: '/swap',
-      //   permanent: true,
-      // },
+      {
+        source: '/',
+        destination: '/swap',
+        permanent: true,
+      },
 
       {
         source: '/zap',
@@ -187,6 +196,7 @@ const SentryWebpackPluginOptions = {
 // Make sure adding Sentry options is the last code to run before exporting, to
 // ensure that your source maps include changes from all other Webpack plugins
 module.exports = withSentryConfig(withPWA(withBundleAnalyzer(nextConfig)), SentryWebpackPluginOptions)
+
 
 // Don't delete this console log, useful to see the config in Vercel deployments
 console.log('next.config.js', JSON.stringify(module.exports, null, 2))
