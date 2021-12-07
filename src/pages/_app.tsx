@@ -135,18 +135,18 @@ function MyApp({
 
         <meta key="twitter:card" name="twitter:card" content="app" />
         <meta key="twitter:title" name="twitter:title" content="MYDA App" />
-        <meta key="twitter:url" name="twitter:url" content="https://app.sushi.com" />
+        <meta key="twitter:url" name="twitter:url" content="https://dex.mydacoin.com" />
         <meta
           key="twitter:description"
           name="twitter:description"
           content="Welcome home to MYDA DeFi"
         />
-        <meta key="twitter:image" name="twitter:image" content="https://app.sushi.com/icons/icon-192x192.png" />
+        <meta key="twitter:image" name="twitter:image" content="https://dex.mydacoin.com/favicon-32x32.png" />
         <meta key="twitter:creator" name="twitter:creator" content="@MydaDex" />
         <meta key="og:type" property="og:type" content="website" />
         <meta key="og:site_name" property="og:site_name" content="MYDA App" />
-        <meta key="og:url" property="og:url" content="https://app.sushi.com" />
-        <meta key="og:image" property="og:image" content="https://app.sushi.com/apple-touch-icon.png" />
+        <meta key="og:url" property="og:url" content="https://dex.mydacoin.com" />
+        <meta key="og:image" property="og:image" content="https://dex.mydacoin.com/favicon-32x32.png" />
         <meta
           key="og:description"
           property="og:description"
