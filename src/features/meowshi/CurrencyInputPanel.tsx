@@ -43,7 +43,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                     ? '/images/tokens/xsushi-square.jpg'
                     : '/images/tokens/nyan-square.jpg'
                 }
-                alt="SUSHI"
+                alt="MYDA"
                 width="62px"
                 height="62px"
                 objectFit="contain"
