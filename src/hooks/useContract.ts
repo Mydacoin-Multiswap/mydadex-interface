@@ -15,6 +15,7 @@ import {
   MINICHEF_ADDRESS,
   MULTICALL2_ADDRESS,
   ROUTER_ADDRESS,
+  ROUTER_ADDRESS_MAIN,
   STOP_LIMIT_ORDER_ADDRESS,
   SUSHI_ADDRESS,
   TIMELOCK_ADDRESS,
@@ -155,11 +156,12 @@ export function useFactoryContract(): Contract | null {
   return useContract(chainId && FACTORY_ADDRESS[chainId], FACTORY_ABI, false)
 }
 
-export function useRouterContract(useArcher = false, withSignerIfPossible?: boolean): Contract | null {
+export function useRouterContract(useArcher = true, withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-
-  const address = useArcher ? ARCHER_ROUTER_ADDRESS[chainId] : ROUTER_ADDRESS[chainId]
-  const abi = useArcher ? ARCHER_ROUTER_ABI : ROUTER_ABI
+  
+  const address = useArcher ? ROUTER_ADDRESS_MAIN[chainId] : ROUTER_ADDRESS[chainId]
+  const abi = useArcher ? ROUTER_ABI : ROUTER_ABI
+  console.log("Router: ",address);
 
   return useContract(address, abi, withSignerIfPossible)
 }

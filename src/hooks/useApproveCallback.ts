@@ -4,6 +4,7 @@ import {
   CurrencyAmount,
   Percent,
   ROUTER_ADDRESS,
+  ROUTER_ADDRESS_MAIN,
   TradeType,
   Trade as V2Trade,
 } from 'mydaswapsdk'
