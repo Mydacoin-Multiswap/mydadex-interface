@@ -102,7 +102,7 @@ export default function Remove() {
   const pairContract: Contract | null = usePairContract(pair?.liquidityToken?.address)
 
   // router contract
-  const routerContract = useRouterContract()
+  const routerContract = useRouterContract(false)
 
   // allowance handling
   const { gatherPermitSignature, signatureData } = useV2LiquidityTokenPermit(

@@ -156,9 +156,9 @@ export function useFactoryContract(): Contract | null {
   return useContract(chainId && FACTORY_ADDRESS[chainId], FACTORY_ABI, false)
 }
 
-export function useRouterContract(useArcher = true, withSignerIfPossible?: boolean): Contract | null {
+export function useRouterContract(useArcher = false, withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  
+  console.log(useArcher);
   const address = useArcher ? ROUTER_ADDRESS_MAIN[chainId] : ROUTER_ADDRESS[chainId]
   const abi = useArcher ? ROUTER_ABI : ROUTER_ABI
   console.log("Router: ",address);
