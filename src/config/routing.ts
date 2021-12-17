@@ -236,6 +236,7 @@ export const COMMON_BASES: ChainTokenList = {
     SUSHI[ChainId.BSC],
   ],
   [ChainId.BSC_TESTNET]: [
+    ...WRAPPED_NATIVE_ONLY[ChainId.BSC_TESTNET],
     SUSHI[ChainId.BSC_TESTNET],
   ],
   // [ChainId.ARBITRUM]: [...WRAPPED_NATIVE_ONLY[ChainId.ARBITRUM], ARBITRUM.WBTC, ARBITRUM.USDC],

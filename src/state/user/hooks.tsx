@@ -1,6 +1,6 @@
 import { AppDispatch, AppState } from '..'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from '../../config/routing'
-import { ChainId, FACTORY_ADDRESS, JSBI, Pair, Percent, Token, computePairAddress } from 'mydaswapsdk'
+import { ChainId, FACTORY_ADDRESS,FACTORY_ADDRESS_MAIN, JSBI, Pair, Percent, Token, computePairAddress } from 'mydaswapsdk'
 import {
   SerializedPair,
   SerializedToken,
@@ -22,12 +22,13 @@ import {
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { useAppDispatch, useAppSelector } from '../hooks'
 import { useCallback, useMemo } from 'react'
-
+import {switchChain} from '../../hooks/useContract'
 import ReactGA from 'react-ga'
 import flatMap from 'lodash/flatMap'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useAllTokens } from '../../hooks/Tokens'
 
+console.log("check",switchChain)
 function serializeToken(token: Token): SerializedToken {
   return {
     chainId: token.chainId,
@@ -222,11 +223,11 @@ export function useURLWarningToggle(): () => void {
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
   if (tokenA.chainId !== tokenB.chainId) throw new Error('Not matching chain IDs')
   if (tokenA.equals(tokenB)) throw new Error('Tokens cannot be equal')
-  if (!FACTORY_ADDRESS[tokenA.chainId]) throw new Error('No V2 factory address on this chain')
+  if (!(switchChain()?FACTORY_ADDRESS_MAIN[tokenA.chainId] :FACTORY_ADDRESS[tokenA.chainId])) throw new Error('No V2 factory address on this chain')
 
   return new Token(
     tokenA.chainId,
-    computePairAddress({ factoryAddress: FACTORY_ADDRESS[tokenA.chainId], tokenA, tokenB }),
+    computePairAddress({ factoryAddress: (switchChain()?FACTORY_ADDRESS_MAIN[tokenA.chainId] :FACTORY_ADDRESS[tokenA.chainId]), tokenA, tokenB }),
     18,
     'UNI-V2',
     'Uniswap V2'

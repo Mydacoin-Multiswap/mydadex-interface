@@ -116,12 +116,13 @@ export function useApproveCallbackFromTrade(
     [trade, allowedSlippage]
   )
   return useApproveCallback(
+    
     amountToApprove,
     chainId
       ? trade instanceof V2Trade
         ? !doArcher
           ? ROUTER_ADDRESS[chainId]
-          : ARCHER_ROUTER_ADDRESS[chainId]
+          : ROUTER_ADDRESS_MAIN[chainId]
         : undefined
       : undefined
   )

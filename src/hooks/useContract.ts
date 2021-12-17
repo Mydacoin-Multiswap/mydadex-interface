@@ -7,6 +7,7 @@ import {
   ChainId,
   ENS_REGISTRAR_ADDRESS,
   FACTORY_ADDRESS,
+  FACTORY_ADDRESS_MAIN,
   KASHI_ADDRESS,
   MAKER_ADDRESS,
   MASTERCHEF_ADDRESS,
@@ -65,6 +66,11 @@ const UNI_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
 
 export function useEIP2612Contract(tokenAddress?: string): Contract | null {
   return useContract(tokenAddress, EIP_2612_ABI, false)
+}
+
+// Main Switch Code MYDADEX
+export function switchChain(){
+  return true;
 }
 
 // returns null on errors
@@ -151,17 +157,17 @@ export function useMiniChefContract(withSignerIfPossible?: boolean): Contract | 
   return useContract(chainId && MINICHEF_ADDRESS[chainId], MINICHEF_ABI, withSignerIfPossible)
 }
 
-export function useFactoryContract(): Contract | null {
+export function useFactoryContract(useArcher = false): Contract | null {
   const { chainId } = useActiveWeb3React()
-  return useContract(chainId && FACTORY_ADDRESS[chainId], FACTORY_ABI, false)
+  const address = switchChain() ? FACTORY_ADDRESS_MAIN[chainId] : FACTORY_ADDRESS[chainId]
+  return useContract(chainId && address, FACTORY_ABI, false)
 }
 
 export function useRouterContract(useArcher = false, withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  console.log(useArcher);
-  const address = useArcher ? ROUTER_ADDRESS_MAIN[chainId] : ROUTER_ADDRESS[chainId]
-  const abi = useArcher ? ROUTER_ABI : ROUTER_ABI
-  console.log("Router: ",address);
+  const address = switchChain() ? ROUTER_ADDRESS_MAIN[chainId] : ROUTER_ADDRESS[chainId]
+  const abi = switchChain() ? ROUTER_ABI : ROUTER_ABI
+  console.log(ROUTER_ADDRESS[97])
 
   return useContract(address, abi, withSignerIfPossible)
 }

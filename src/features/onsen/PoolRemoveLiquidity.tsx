@@ -26,6 +26,7 @@ import { FiatValue } from '../../components/CurrencyInputPanel/FiatValue'
 import { useUSDCValue } from '../../hooks/useUSDCPrice'
 import Alert from '../../components/Alert'
 import Typography from '../../components/Typography'
+import { switchChain } from '../../hooks/useContract'
 
 const DEFAULT_REMOVE_LIQUIDITY_SLIPPAGE_TOLERANCE = new Percent(5, 100)
 
@@ -81,7 +82,7 @@ const PoolWithdraw = ({ currencyA, currencyB }) => {
   const pairContract: Contract | null = usePairContract(pair?.liquidityToken?.address)
 
   // router contract
-  const routerContract = useRouterContract(false)
+  const routerContract = useRouterContract(switchChain())
 
   // allowance handling
   const { gatherPermitSignature, signatureData } = useV2LiquidityTokenPermit(

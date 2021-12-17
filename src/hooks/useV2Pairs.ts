@@ -1,9 +1,10 @@
-import { Currency, CurrencyAmount, FACTORY_ADDRESS, Pair, computePairAddress } from 'mydaswapsdk'
+import { Currency, CurrencyAmount, FACTORY_ADDRESS, Pair, computePairAddress, FACTORY_ADDRESS_MAIN } from 'mydaswapsdk'
 
 import IUniswapV2PairABI from '@sushiswap/core/abi/IUniswapV2Pair.json'
 import { Interface } from '@ethersproject/abi'
 import { useMemo } from 'react'
 import { useMultipleContractSingleData } from '../state/multicall/hooks'
+import {switchChain} from './useContract'
 
 const PAIR_INTERFACE = new Interface(IUniswapV2PairABI)
 
@@ -14,6 +15,7 @@ export enum PairState {
   INVALID,
 }
 
+
 export function useV2Pairs(currencies: [Currency | undefined, Currency | undefined][]): [PairState, Pair | null][] {
   const tokens = useMemo(
     () => currencies.map(([currencyA, currencyB]) => [currencyA?.wrapped, currencyB?.wrapped]),
@@ -23,13 +25,15 @@ export function useV2Pairs(currencies: [Currency | undefined, Currency | undefin
   const pairAddresses = useMemo(
     () =>
       tokens.map(([tokenA, tokenB]) => {
+        console.log("Check",switchChain());
+
         return tokenA &&
           tokenB &&
           tokenA.chainId === tokenB.chainId &&
           !tokenA.equals(tokenB) &&
-          FACTORY_ADDRESS[tokenA.chainId]
+          (switchChain()?FACTORY_ADDRESS_MAIN[tokenA.chainId] :FACTORY_ADDRESS[tokenA.chainId])
           ? computePairAddress({
-              factoryAddress: FACTORY_ADDRESS[tokenA.chainId],
+              factoryAddress: (switchChain()?FACTORY_ADDRESS_MAIN[tokenA.chainId] :FACTORY_ADDRESS[tokenA.chainId]),
               tokenA,
               tokenB,
             })

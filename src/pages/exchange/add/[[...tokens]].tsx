@@ -44,6 +44,7 @@ import { useRouterContract } from '../../../hooks'
 import { useTransactionAdder } from '../../../state/transactions/hooks'
 import useTransactionDeadline from '../../../hooks/useTransactionDeadline'
 import { useWalletModalToggle } from '../../../state/application/hooks'
+import {switchChain} from '../../../hooks/useContract'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -127,7 +128,7 @@ export default function Add() {
     {}
   )
 
-  const routerContract = useRouterContract(false)
+  const routerContract = useRouterContract(switchChain())
 
   // check whether the user has approved the router on the tokens
   const [approvalA, approveACallback] = useApproveCallback(parsedAmounts[Field.CURRENCY_A], routerContract?.address)
@@ -315,7 +316,7 @@ export default function Add() {
   return (
     <>
       <Head>
-        <title>Add Liquidity | Sushi</title>
+        <title>Add Liquidity | MYDA</title>
         <meta
           key="description"
           name="description"

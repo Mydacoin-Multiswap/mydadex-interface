@@ -67,7 +67,7 @@
     "@sushiswap/chainlink-whitelist": "0.2.5",
     "@sushiswap/core": "^2.0.0-canary.1",
     "@sushiswap/core-sdk": "1.0.0-canary.1",
-    "@sushiswap/default-token-list": "16.18.0",
+    "myda_default_token_list": "20.8.2",
     "@sushiswap/limit-order-pair-list": "0.2.2",
     "@sushiswap/sushi-data": "^1.0.24",
     "@tailwindcss/jit": "^0.1.18",
@@ -175,6 +175,6 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "mydaswapsdk": "5.0.0-canary.206"
+    "mydaswapsdk": "^5.0.0-canary.208"
   }
 }

@@ -109,6 +109,10 @@ const BAD_RECIPIENT_ADDRESSES: { [chainId: string]: { [address: string]: true } 
     '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac': true, // v2 factory
     '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F': true, // v2 router 02
   },
+  [ChainId.ROPSTEN]: {
+    '0x1c38E77E55b78A4AB7a60f36C53036ccBBE4aDE4': true, // v2 factory
+    '0x8D66Ac8CB74ae552334c190C373b6D32566e94b9': true, // v2 router 02
+  },
 }
 
 /**

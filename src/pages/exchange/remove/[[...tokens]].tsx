@@ -47,6 +47,7 @@ import useTransactionDeadline from '../../../hooks/useTransactionDeadline'
 import { useUserSlippageToleranceWithDefault } from '../../../state/user/hooks'
 import { useV2LiquidityTokenPermit } from '../../../hooks/useERC20Permit'
 import { useWalletModalToggle } from '../../../state/application/hooks'
+import {switchChain } from '../../../hooks/useContract'
 
 const DEFAULT_REMOVE_LIQUIDITY_SLIPPAGE_TOLERANCE = new Percent(5, 100)
 
@@ -102,7 +103,7 @@ export default function Remove() {
   const pairContract: Contract | null = usePairContract(pair?.liquidityToken?.address)
 
   // router contract
-  const routerContract = useRouterContract(false)
+  const routerContract = useRouterContract(switchChain())
 
   // allowance handling
   const { gatherPermitSignature, signatureData } = useV2LiquidityTokenPermit(

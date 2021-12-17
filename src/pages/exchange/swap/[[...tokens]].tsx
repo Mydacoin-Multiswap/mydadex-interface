@@ -219,7 +219,9 @@ export default function Swap() {
   )
 
   const routeNotFound = !trade?.route
+  // const routeNotFound = false
 
+  console.log(routeNotFound);
   // check whether the user has approved the router on the input token
   const [approvalState, approveCallback] = useApproveCallbackFromTrade(trade, allowedSlippage, doArcher)
 

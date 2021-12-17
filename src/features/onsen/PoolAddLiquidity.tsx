@@ -21,6 +21,7 @@ import { useTransactionAdder } from '../../state/transactions/hooks'
 import { useExpertModeManager, useUserSlippageToleranceWithDefault } from '../../state/user/hooks'
 import { ConfirmAddModalBottom } from '../exchange-v1/liquidity/ConfirmAddModalBottom'
 import CurrencyInputPanel from './CurrencyInputPanel'
+import {switchChain} from '../../hooks/useContract'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -99,7 +100,7 @@ const PoolDeposit = ({ currencyA, currencyB }) => {
     {}
   )
 
-  const routerContract = useRouterContract(false)
+  const routerContract = useRouterContract(switchChain())
 
   // check whether the user has approved the router on the tokens
   const [approvalA, approveACallback] = useApproveCallback(parsedAmounts[Field.CURRENCY_A], routerContract?.address)

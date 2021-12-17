@@ -34,6 +34,7 @@ import { useMemo } from 'react'
 import { useTransactionAdder } from '../state/transactions/hooks'
 import useTransactionDeadline from './useTransactionDeadline'
 import { useUserArcherETHTip } from '../state/user/hooks'
+import { switchChain } from '../hooks/useContract'
 
 export enum SwapCallbackState {
   INVALID,
@@ -83,8 +84,8 @@ export function useSwapCallArguments(
   const recipient = recipientAddressOrName === null ? account : recipientAddress
   const deadline = useTransactionDeadline()
 
-  const routerContract = useRouterContract(false)
-  const factoryContract = useFactoryContract()
+  const routerContract = useRouterContract(switchChain())
+  const factoryContract = useFactoryContract(switchChain())
 
   const argentWalletContract = useArgentWalletContract()
 
