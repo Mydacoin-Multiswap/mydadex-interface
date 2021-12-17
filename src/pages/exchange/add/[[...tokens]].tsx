@@ -47,6 +47,8 @@ import { useWalletModalToggle } from '../../../state/application/hooks'
 import {switchChain} from '../../../hooks/useContract'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
+const GREY = '#1D1D1D'
+
 
 export default function Add() {
   const { i18n } = useLingui()
@@ -374,7 +376,8 @@ export default function Add() {
         />
 
         <DoubleGlowShadow>
-          <div className="p-4 space-y-4 rounded bg-dark-900" style={{ zIndex: 1 }}>
+          <div className="p-4 space-y-4 rounded bg-dark-900" 
+          style={{ backgroundColor: 'rgb(98, 0, 57, 0.75)',zIndex: 1, boxShadow: `10px 10px 5px ${GREY}` }}>
             {/* <AddRemoveTabs creating={isCreate} adding={true} defaultSlippage={DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE} /> */}
 
             <ExchangeHeader

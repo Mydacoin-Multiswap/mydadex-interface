@@ -29,6 +29,8 @@ import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hook
 import { useV2Pairs } from '../../../hooks/useV2Pairs'
 
 export default function Pool() {
+  const GREY = '#1D1D1D'
+
   const { i18n } = useLingui()
   const router = useRouter()
   const { account, chainId } = useActiveWeb3React()
@@ -113,7 +115,9 @@ export default function Pool() {
         type="information"
       />
 
-      <div className="p-4 space-y-4 rounded bg-dark-900">
+      <div className="p-4 space-y-4 rounded bg-dark-900"
+        style={{ backgroundColor: 'rgb(98, 0, 57, 0.75)', boxShadow: `10px 10px 5px ${GREY}` }}
+      >
         <div className="grid grid-flow-row gap-3">
           {!account ? (
             <Web3Connect size="lg" color="blue" className="w-full" />

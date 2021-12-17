@@ -7,6 +7,7 @@ import Buy from '../../features/on-ramp/ramp'
 import ExternalLink from '../ExternalLink'
 import Image from 'next/image'
 import LanguageSwitch from '../LanguageSwitch'
+import DexSwitch from '../DexSwitch'
 import Link from 'next/link'
 import More from './More'
 import NavLink from '../NavLink'
@@ -226,6 +227,9 @@ function AppBar(): JSX.Element {
                     <div className="hidden md:block">
                       <LanguageSwitch />
                     </div>
+                    {/* <div className="hidden md:block">
+                      <DexSwitch />
+                    </div> */}
                     <More />
                   </div>
                 </div>
