@@ -91,7 +91,7 @@ export default function Pool() {
   return (
     <Container id="pool-page" className="py-4 space-y-6 md:py-8 lg:py-12" maxWidth="2xl">
       <Head>
-        <title>Pool | Sushi</title>
+        <title>Pool | MYDA</title>
         <meta
           key="description"
           name="description"

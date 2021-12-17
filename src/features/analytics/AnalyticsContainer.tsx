@@ -6,7 +6,7 @@ export default function AnalyticsContainer({ children }): JSX.Element {
   return (
     <>
       <Head>
-        <title>MydaDex Liquidity Pair (SLP) Analytics | Sushi</title>
+        <title>MydaDex Liquidity Pair (SLP) Analytics | MYDA</title>
         <meta name="description" content="MydaDex Liquidity Pair (SLP) Analytics by Sushi" />
       </Head>
 

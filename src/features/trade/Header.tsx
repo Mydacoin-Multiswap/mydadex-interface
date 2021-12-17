@@ -10,6 +10,7 @@ import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../hooks'
 import { useLingui } from '@lingui/react'
 import { useRouter } from 'next/router'
+import cookie from 'cookie-cutter'
 
 const getQuery = (input, output) => {
   if (!input && !output) return
@@ -25,6 +26,20 @@ interface ExchangeHeaderProps {
   input?: Currency
   output?: Currency
   allowedSlippage?: Percent
+}
+
+function classChange(id : Number){
+  // if(document.getElementById('mydaClass'))
+  if(id==1){
+    cookie.set('dexswitch', "myda");
+    document.getElementById('mydaClass').className = "flex items-center justify-center px-4 text-base font-medium font-bold text-center border rounded rounded-md text-secondary hover:text-high-emphesis text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink";
+    document.getElementById('sushiClass').className = "flex items-center justify-center px-4 text-base font-medium";
+
+  }else if(id==2){
+    cookie.set('dexswitch', "sushi");
+    document.getElementById('sushiClass').className = "flex items-center justify-center px-4 text-base font-medium font-bold text-center border rounded rounded-md text-secondary hover:text-high-emphesis text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink";
+    document.getElementById('mydaClass').className = "flex items-center justify-center px-4 text-base font-medium";
+  }
 }
 
 const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippage }) => {
@@ -71,6 +86,20 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
           </a>
         </NavLink>
       </div>
+
+
+      <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
+      
+        <a id="mydaClass" className="flex items-center justify-center px-4 text-base font-medium font-bold text-center border rounded rounded-md text-secondary hover:text-high-emphesis text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink" style={{cursor: 'pointer'}} onClick={() => classChange(1)}>
+            {i18n._(t`MYDA`)}
+        </a>
+        
+        <a id="sushiClass" className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis "style={{cursor: 'pointer'}} onClick={() => classChange(2)}>
+            {i18n._(t`SUSHI`)}
+          </a>
+      </div>
+
+      
       <div className="flex items-center">
         <div className="grid grid-flow-col gap-1">
           {isLimitOrder && (
@@ -98,6 +127,15 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+            
   )
 }
 

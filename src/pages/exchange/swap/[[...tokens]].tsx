@@ -74,6 +74,7 @@ import { useRouter } from 'next/router'
 import { useSwapCallback } from '../../../hooks/useSwapCallback'
 import { useUSDCValue } from '../../../hooks/useUSDCPrice'
 import { warningSeverity } from '../../../functions/prices'
+import cookie from 'cookie-cutter'
 
 export default function Swap() {
   const { i18n } = useLingui()
