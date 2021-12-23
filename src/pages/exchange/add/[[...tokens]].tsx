@@ -161,6 +161,7 @@ export default function Add() {
     if (currencyA.isNative || currencyB.isNative) {
       const tokenBIsETH = currencyB.isNative
       estimate = routerContract.estimateGas.addLiquidityETH
+      console.log("Estimate",estimate);
       method = routerContract.addLiquidityETH
       args = [
         (tokenBIsETH ? currencyA : currencyB)?.wrapped?.address ?? '', // token

@@ -34,6 +34,7 @@ import { useMemo } from 'react'
 import { useTransactionAdder } from '../state/transactions/hooks'
 import useTransactionDeadline from './useTransactionDeadline'
 import { useUserArcherETHTip } from '../state/user/hooks'
+import cookie from 'cookie-cutter'
 import { switchChain } from '../hooks/useContract'
 
 export enum SwapCallbackState {
@@ -83,6 +84,13 @@ export function useSwapCallArguments(
   const { address: recipientAddress } = useENS(recipientAddressOrName)
   const recipient = recipientAddressOrName === null ? account : recipientAddress
   const deadline = useTransactionDeadline()
+  
+  console.log("?",trade)
+  if(trade == null && cookie.get('dexswitch')=="myda"){
+    cookie.set('dexswitch',"sushi")
+  }else if(trade != null && cookie.get('dexswitch')=="myda"){
+    cookie.set('dexswitch',"myda")
+  }
 
   const routerContract = useRouterContract(switchChain())
   const factoryContract = useFactoryContract(switchChain())

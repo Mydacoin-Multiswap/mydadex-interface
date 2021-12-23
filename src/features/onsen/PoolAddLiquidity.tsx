@@ -101,6 +101,7 @@ const PoolDeposit = ({ currencyA, currencyB }) => {
   )
 
   const routerContract = useRouterContract(switchChain())
+  console.log("routerContract",routerContract)
 
   // check whether the user has approved the router on the tokens
   const [approvalA, approveACallback] = useApproveCallback(parsedAmounts[Field.CURRENCY_A], routerContract?.address)
@@ -135,7 +136,7 @@ const PoolDeposit = ({ currencyA, currencyB }) => {
       const tokenBIsETH = currencyB.isNative
       estimate = routerContract.estimateGas.addLiquidityETH
       method = routerContract.addLiquidityETH
-      args = [
+      args = [ 
         (tokenBIsETH ? currencyA : currencyB)?.wrapped?.address ?? '', // token
         (tokenBIsETH ? parsedAmountA : parsedAmountB).quotient.toString(), // token desired
         amountsMin[tokenBIsETH ? Field.CURRENCY_A : Field.CURRENCY_B].toString(), // token min
@@ -164,7 +165,7 @@ const PoolDeposit = ({ currencyA, currencyB }) => {
     await estimate(...args, value ? { value } : {})
       .then((estimatedGasLimit) =>
         method(...args, {
-          ...(value ? { value } : {}),
+          ...(value ? { value } : {}),          
           gasLimit: calculateGasMargin(estimatedGasLimit),
         }).then((response) => {
           setAttemptingTxn(false)

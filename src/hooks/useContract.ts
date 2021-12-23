@@ -71,6 +71,7 @@ export function useEIP2612Contract(tokenAddress?: string): Contract | null {
 
 // Main Switch Code MYDADEX 
 export function switchChain(){
+  // console.log('network: ',cookie.get('dexswitch'))
   if(cookie.get('dexswitch')=="sushi"){
     return true;
   }else if(cookie.get('dexswitch')=="myda"){

@@ -88,7 +88,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
       </div>
 
 
-      <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
+      {/* <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
       
         <a id="mydaClass" className="flex items-center justify-center px-4 text-base font-medium font-bold text-center border rounded rounded-md text-secondary hover:text-high-emphesis text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink" style={{cursor: 'pointer'}} onClick={() => classChange(1)}>
             {i18n._(t`MYDA`)}
@@ -97,7 +97,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
         <a id="sushiClass" className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis "style={{cursor: 'pointer'}} onClick={() => classChange(2)}>
             {i18n._(t`SUSHI`)}
           </a>
-      </div>
+      </div> */}
 
       
       <div className="flex items-center">
