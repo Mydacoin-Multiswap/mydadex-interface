@@ -88,8 +88,13 @@ export function useSwapCallArguments(
   console.log("?",trade)
   if(trade == null && cookie.get('dexswitch')=="myda"){
     cookie.set('dexswitch',"sushi")
+    console.log("DEX: Sushi")
+  }else if(trade == null && cookie.get('dexswitch')=="sushi"){
+    cookie.set('dexswitch',"myda")
+    console.log("DEX: Myda")
   }else if(trade != null && cookie.get('dexswitch')=="myda"){
     cookie.set('dexswitch',"myda")
+    console.log("DEX: Myda")
   }
 
   const routerContract = useRouterContract(switchChain())
