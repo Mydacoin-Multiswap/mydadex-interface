@@ -85,20 +85,22 @@ export function useSwapCallArguments(
   const recipient = recipientAddressOrName === null ? account : recipientAddress
   const deadline = useTransactionDeadline()
   
-  console.log("?",trade)
-  if(trade == null && cookie.get('dexswitch')=="myda"){
-    cookie.set('dexswitch',"sushi")
-    console.log("DEX: Sushi")
-  }else if(trade == null && cookie.get('dexswitch')=="sushi"){
-    cookie.set('dexswitch',"myda")
-    console.log("DEX: Myda")
-  }else if(trade != null && cookie.get('dexswitch')=="myda"){
-    cookie.set('dexswitch',"myda")
-    console.log("DEX: Myda")
-  }
-
   const routerContract = useRouterContract(switchChain())
   const factoryContract = useFactoryContract(switchChain())
+
+  if(trade == null && typeof cookie.get('dexswitch')== undefined){
+    cookie.set('dexswitch',"myda")
+    console.log("DEX: MYDA")
+  }else if(trade != null && cookie.get('dexswitch')=="myda"){
+    cookie.set('dexswitch',"myda")
+    console.log("DEX: MYDA")
+  }else if(trade == null && cookie.get('dexswitch')=="myda"){
+    cookie.set('dexswitch',"sushi")
+    console.log("DEX: SUSHI")
+  }else if(trade != null && cookie.get('dexswitch')=="sushi"){
+    cookie.set('dexswitch',"sushi")
+    console.log("DEX: SUSHI")
+  }
 
   const argentWalletContract = useArgentWalletContract()
 
