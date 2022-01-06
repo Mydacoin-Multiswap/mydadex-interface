@@ -12212,10 +12212,10 @@ myda_default_token_list@20.8.2:
   resolved "https://registry.yarnpkg.com/myda_default_token_list/-/myda_default_token_list-20.8.2.tgz#fcae672d534b86eeec32a6a5969c887428bbfbe6"
   integrity sha512-7W6SKhx7H501Gvb456RKyzsc4Vdcg6wrnsTnKQv8mbK/NsbX/0qg38Uu7ADoG4rlNCyCfonQ93oAXFISaQ4prA==
 
-mydaswapsdk@^5.0.0-canary.208:
-  version "5.0.0-canary.208"
-  resolved "https://registry.yarnpkg.com/mydaswapsdk/-/mydaswapsdk-5.0.0-canary.208.tgz#cb9e26202392adc0f7ee46f88ebaa178529b4c34"
-  integrity sha512-lKej3WuRIK2+CwZlKA7CGuctC0j90I7Y2QbNlrWzi4aOc81AkU5zqQBzQVSq51mOJxCvl++CXfSYjClUtBTXyw==
+mydaswapsdk@^5.0.0-canary.211:
+  version "5.0.0-canary.211"
+  resolved "https://registry.yarnpkg.com/mydaswapsdk/-/mydaswapsdk-5.0.0-canary.211.tgz#282dc37ebf6b59b8a700ebe0e36c1319a3c9dd91"
+  integrity sha512-ZHzgLKNPb3aLXA2ExB9QvGguf5hOgstOsMxFOrssOpif1y5KJQKW4lDdf6T5An/KLGfiMWwg7IClLFz1GmYhRQ==
   dependencies:
     "@ethersproject/abi" "^5.4.0"
     "@ethersproject/abstract-signer" "^5.4.0"

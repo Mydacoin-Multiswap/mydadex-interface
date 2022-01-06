@@ -62,6 +62,7 @@ import { getContract } from '../functions/contract'
 import { useActiveWeb3React } from './useActiveWeb3React'
 import { useMemo } from 'react'
 import cookie from 'cookie-cutter'
+import { add } from 'lodash'
 
 const UNI_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
 
@@ -174,6 +175,7 @@ export function useFactoryContract(useArcher = false): Contract | null {
 export function useRouterContract(useArcher = false, withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
   const address = switchChain() ? ROUTER_ADDRESS_MAIN[chainId] : ROUTER_ADDRESS[chainId]
+  console.log(address)
   const abi = switchChain() ? ROUTER_ABI : ROUTER_ABI
 
   return useContract(address, abi, withSignerIfPossible)

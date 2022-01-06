@@ -100,7 +100,11 @@ export function useSwapCallArguments(
   }else if(trade != null && cookie.get('dexswitch')=="sushi"){
     cookie.set('dexswitch',"sushi")
     console.log("DEX: SUSHI")
+  }else{
+    cookie.set('dexswitch',"sushi")
+    console.log("DEX: SUSHI")
   }
+  console.log("trade: ",trade)
 
   const argentWalletContract = useArgentWalletContract()
 
